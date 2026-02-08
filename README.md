@@ -25,6 +25,12 @@ The services that BrightTech Solutions would offer include:
 * AWS
 * OpenAI (if the chatbot is implemented)
 
+## AWS Implementation Logic
+
+<img width="1021" height="232" alt="BrightTechAWS drawio" src="https://github.com/user-attachments/assets/7028fdae-62cb-4717-9d35-309b2b1c7c75" />
+
+
+
 ## Website Sections (On the Navigation Bar)
 * **Home Page:** Display a brief welcome message and the company's mission.
   
@@ -35,6 +41,13 @@ The services that BrightTech Solutions would offer include:
 * **Contact:** Gives clients and those who are simply curious about the company the opportunity to attach their email and a question/comment they have (this is to focus more on taking information from the application's front-end and saving it in the back-end database).
   
 * **Get Started:** This page will lead users to the different pricing tiers for BrightTech Solution Services and their respective benefits. By clicking "Get Started" under one of these plans, users will be taken to a sign up form where they will be prompted to enter their company name, email address, full name, create a password, and choose the type of service they would like to receive.
+
+## Example Website Layout So Far
+
+
+<img width="958" height="501" alt="initialWebsite_screenshot" src="https://github.com/user-attachments/assets/74c13598-128c-43af-9aaa-c4d6dc537276" />
+
+
 
 ## Milestone Schedule
 **2/13:**

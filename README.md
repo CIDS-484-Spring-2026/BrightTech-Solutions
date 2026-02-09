@@ -48,6 +48,8 @@ The services that BrightTech Solutions would offer include:
   
 * **Get Started:** This page will lead users to the different pricing tiers for BrightTech Solution Services and their respective benefits. By clicking "Get Started" under one of these plans, users will be taken to a sign up form where they will be prompted to enter their company name, email address, full name, create a password, and choose the type of service they would like to receive.
 
+* **Log In:** Users will be prompted to enter their email and password to log back into their account.
+
 ## Examples of Website Layout So Far
 
 

@@ -1,0 +1,36 @@
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.startedButton {
+  margin: 0;
+  margin-left: 35%;
+  display: inline-block;   /* makes it behave like a button */
+  padding: 12px 24px;
+  background-color: #243979;
+  color: white;
+  text-decoration: none;   /* remove link underline */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.startedButton:hover{
+  background-color: #1e90ff;
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: yellow;
+}
+
+.planTitle{
+  text-align: center;
+}
+

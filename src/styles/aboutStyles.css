@@ -1,0 +1,7 @@
+.aboutImage {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

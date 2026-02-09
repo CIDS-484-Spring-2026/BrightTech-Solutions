@@ -1,0 +1,62 @@
+/* Navbar container */
+nav {
+  background-color: #1e90ff;
+  padding: 1rem 2rem;
+  display: flex;
+  /*justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+
+nav {
+  width: 100vw; /* spans the full viewport width */
+  margin-left: calc(-50vw + 50%); /* optional trick if it's stuck in a centered layout */
+}
+
+
+/* Navbar links */
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* always white on navbar */
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #ffeb3b; /* yellow hover */
+  transform: scale(1.1);
+}
+
+/* Active link styling */
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+.navbarLogo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0; /* prevents resizing */
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  flex: 1;
+  margin-right: 399px;
+}
+
+.brightTechLogo {
+  height: 150px;
+  width: auto;
+}
+
+
+   

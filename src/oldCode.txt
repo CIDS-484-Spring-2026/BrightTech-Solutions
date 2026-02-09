@@ -1,0 +1,16 @@
+//Original nav style from Navbar.css
+nav {
+  background-color: #1e90ff; /* bright blue */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: Arial, sans-serif;
+  font-weight: 700; /* bold text */
+  width: 100%;
+  margin: 0;
+}
+
+
+

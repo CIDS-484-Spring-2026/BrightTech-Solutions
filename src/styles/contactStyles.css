@@ -1,0 +1,37 @@
+.contactForm {
+    border: 1px solid black;
+    border-width: 1px;
+    border-radius: 16px;
+    width: 500px;
+    margin-left: 29.45%;
+    text-align: left;
+    padding: 10px;
+}
+
+
+.formLabels{
+    font-size: 1em;
+}
+
+.formTitle, .formCaption{
+    text-align: center;
+}
+
+.commentSubmit {
+  margin: 0;
+  margin-left: 40%;
+  display: inline-block;   /* makes it behave like a button */
+  padding: 12px 24px;
+  background-color: #243979;
+  color: white;
+  text-decoration: none;   /* remove link underline */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.commentSubmit:hover{
+  background-color: #1e90ff;
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: yellow;
+}

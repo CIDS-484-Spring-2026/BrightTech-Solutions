@@ -1,0 +1,22 @@
+.homeheader{
+    color: black;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+}
+
+/*NOTE: From the <th> element*/
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+
+.bottomRow{
+	width: 500px;
+}

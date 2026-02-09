@@ -1,5 +1,8 @@
 # BrightTech Solutions
-A fictional technical marketing service where companies can sign up to receive assistance with maintaining their brand.
+A fictional technical marketing service where companies can sign up to receive assistance with maintaining their brand through a variety of different services. 
+
+## Target Audience
+This platform is aimed towards the adminstrative members within a company who are looking to monitor and develop the different ways in which they would like to enhance their business. 
 
 ## Overall Project Goals
 * Set up an effective application front-end that is easy for users to navigate and understand the purpose of the project 

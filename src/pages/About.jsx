@@ -70,7 +70,7 @@ function About(){
                 <h2>Where It All Began</h2>
                 <div className="historyExplanation">
                     <div className="historyText">
-                        <p>BrightTech Solutions came to fruitiion in 2018 thanks to our diligent
+                        <p>BrightTech Solutions came to fruition in 2018 thanks to our diligent
                             team members. Before becoming what it is today, the team asked 
                             themselves one simple question: How can we help other businesses 
                             reach their full potential? This could manifest itself in the form 

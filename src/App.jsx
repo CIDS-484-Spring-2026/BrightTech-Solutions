@@ -14,25 +14,29 @@ import LogIn from './pages/LogIn';
 import './index.css';
 import './App.css';
 
+
 function App() {
+  
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/getstarted" element={<GetStarted />} />
-        <Route path="/standardsignup" element={<StandardSignUp />} />
-        <Route path="/premiumsignup" element={<PremiumSignUp />} />
-        <Route path="/deluxesignup" element={<DeluxeSignUp />} />
-        <Route path="/login" element={<LogIn />} />
-      </Routes>
-      <br />
-      <br />
-      <Footer />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/getstarted" element={<GetStarted />} />
+          <Route path="/standardsignup" element={<StandardSignUp />} />
+          <Route path="/premiumsignup" element={<PremiumSignUp />} />
+          <Route path="/deluxesignup" element={<DeluxeSignUp />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+        <br />
+        <br />
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

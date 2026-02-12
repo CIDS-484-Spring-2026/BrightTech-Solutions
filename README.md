@@ -23,7 +23,7 @@ The services that BrightTech Solutions would offer include:
 * HTML
 * CSS
 * AWS
-* OpenAI (if there is still time to implement a chatbot)
+* Google Gemini (if there is still time to implement a chatbot using Gemini API Key)
 
 <img width="956" height="505" alt="techStack_image" src="https://github.com/user-attachments/assets/49117191-5943-4987-8792-17cd80d385c0" />
 
@@ -45,7 +45,8 @@ The services that BrightTech Solutions would offer include:
   
 * **Get Started:** This page will lead users to the different pricing tiers for BrightTech Solution Services and their respective benefits. By clicking "Get Started" under one of these plans, users will be taken to a sign up form where they will be prompted to enter their company name, email address, full name, create a password, and choose the type of service they would like to receive.
 
-* **Log In:** Users will be prompted to enter their email and password to log back into their account.
+* **Log In:** Users will be prompted to enter their email and password to log back into their account that have already created through the "Get Started" page. Ideally, if the user enters their credentials correctly, they will be led to their account. If not, an error message will appear and they will be prompted to try again.
+    * **Beyond the Log In:** Ideally, once a user successfully logs into their account, they will be led to a dashboard that will display the number of consulting hours for that week, number of tickets attended to within a week, and the priority level of each ticket (Low, Moderate, and Urgent).
 
 ## Examples of Website Layout So Far
 

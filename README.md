@@ -74,7 +74,7 @@ The services that BrightTech Solutions would offer include:
  
 
 ## Milestone 1 Video
-[this text will eventually be replaced with the 5-minute explanation video]
+[Link Text](https://www.youtube.com/watch?v=N9y59C47YQ0) 
 
 
 

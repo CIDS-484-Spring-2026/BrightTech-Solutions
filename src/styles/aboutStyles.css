@@ -47,7 +47,7 @@
 
 .historyExplanation {
   font-family: arial, sans-serif;
-   display: flex; 
+  display: flex; 
   align-items: flex-start; 
   gap: 20px; 
 }
@@ -85,10 +85,13 @@
   background-color: #e4e4e4;
   border-radius: 10px;
   font-size: 1.2em;
+  transition: all 0.3s ease-out;
+  
 }
 
 .faqAnswer, .faqList{
   text-align: left;
   font-size: 1.2em;
 }
+
 

@@ -14,7 +14,8 @@ function About(){
             <div className="aboutTopContainer">
                 <br />
                 <h1 className="aboutCaptionBold">We provide the best technical
-                     services to help enhance your business </h1>
+                    services to help enhance your business 
+                </h1>
                 <p>With our assistance, you can expect your business to flourish.</p>
                 <p>BrightTech Solutions is the final destination for technical excellence</p>
                 
@@ -107,8 +108,8 @@ function About(){
 
             <h2>Still unsure? Here are some frequently asked questions we receive</h2>
             <details className="faqDropdown">
-            <summary className="faqQuestions">What type of IT Management services
-                 does BrightTech Solutions provide?</summary>
+                <summary className="faqQuestions">What type of IT Management services
+                    does BrightTech Solutions provide?</summary>
                 <p className="faqAnswer">There are a number of different IT services that we can conduct for your business.
                     Some of them include, but are not limited to:
                 </p>
@@ -153,7 +154,7 @@ function About(){
 
             <details className="faqDropdown">
                 <summary className="faqQuestions">How are urgent, high-priority issues handled?</summary>
-                <div>
+                <div className="faqContent">
                     <p className="faqAnswer">BrightTech Solutions utilizes a ticketing system to prioritize
                         and keep track of all running tasks. The priority levels are sorted as such:
                     </p>
@@ -174,7 +175,7 @@ function About(){
 
             <details className="faqDropdown">
                 <summary className="faqQuestions">What format are all support communications provided in?</summary>
-                <div>
+                <div className="faqContent">
                     <p className="faqAnswer">All communications between BrightTech Solutions and their clients
                         take place remotely. That way, it can be easier for companies to reach out for help
                         as the need arises. We also conduct all communications through a number of different

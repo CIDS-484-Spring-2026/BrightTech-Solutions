@@ -2,12 +2,63 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/signUpStyles.css';  
 import { useState, useEffect } from 'react';
+//import { useNavigate } from 'react-router-dom'; **COME BACK AND USE LATER**
 
 function StandardSignUp(){
     const location = useLocation();
 
-    
+
+    //Creating variables that will be sent to the database
     const [idNumber, setIDNumber] = useState(null);
+    const [companyName, setCompanyName] = useState('');
+    const [email, setEmail] = useState('');
+    const [adminName, setAdminName] = useState('');
+    const [password, setPassword] = useState('');
+    const [plan, setPlan] = useState('Standard');
+    const [service, setService] = useState('');
+
+    //Handles the submission of the form
+    const handleSubmit = async(event) => {
+        event.preventDefault();
+
+        //const navigate = useNavigate(); **Will take users to next page**
+
+        const standardFormData = {
+            companyName,
+            email,
+            adminName,
+            password,
+            plan,
+            idNumber,
+            service
+        };
+
+        try {
+            const response = await fetch("API URL HERE",{
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/JSON"
+                },
+                body: JSON.stringify(standardFormData)
+            })
+
+            if(!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+
+            console.log("Success: ", result);
+            alert("Form submission successful. Thank you for your input!")
+            //navigate('/dashboard') **will ideally lead user to dashboard**
+
+
+        } catch (error){
+            console.error("Error with form submission: ", error);
+            alert("Form submission failed. Please try again later");
+        }
+
+    };
 
     //Generating ID number
     const generateNumber = () => {
@@ -25,43 +76,100 @@ function StandardSignUp(){
     return(
         <div>
             <br />
-            <form className="signUpStylesForm">
+            <form onSubmit={handleSubmit} className="signUpStylesForm">
                 <h2 className="formTitle">Sign Up Now</h2>
                 <p className="formCaption"><i>Please fill out your company's information</i></p>
                 <br />
 
                 <label for="text" className="formLabels"><b>Company Name: </b> </label>
-                <input type="text" name="companyName" placeholder="Company Name" required /> <br />
+                <input 
+                    type="text" 
+                    name="companyName" 
+                    value={companyName}
+                    onChange={(e) => setCompanyName(e.target.value)}
+                    placeholder="Company Name" 
+                    required 
+                /> 
+                <br />
 
                 <br />
 
                 <label for="email" className="formLabels"><b>Email: </b> </label>
-                <input type="email" name="email" placeholder="Admin Email Address" required /> <br />
+                <input 
+                    type="email" 
+                    name="email" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Admin Email Address" 
+                    required 
+                /> 
+                
+                <br />
 
                 <br />
 
                 <label for="text" className="formLabels"><b>Admin Name: </b> </label>
-                <input type="text" name="adminName" placeholder="Admin Full Name" required /> <br />
+                <input 
+                    type="text" 
+                    name="adminName" 
+                    value={adminName}
+                    onChange={(e) => setAdminName(e.target.value)}
+                    placeholder="Admin Full Name" 
+                    required 
+                /> 
+                
+                <br />
 
                 <br />
 
                 <label for="password" className="formLabels"><b>Create Password: </b> </label>
-                <input type="password"  id="myPassword" name="password" placeholder="Password" required /> <br />
+                <input 
+                    type="password"  
+                    id="myPassword" 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    name="password" 
+                    placeholder="Password" 
+                    required 
+                /> 
+                    <br />
 
                 <br />
 
                 <label for="text" className="formLabels"><b>Plan: </b> </label>
-                <input id="plan" name="plan" type="text" value="Standard" disabled /> <br />
+                <input 
+                    id="plan" 
+                    name="plan" 
+                    value={plan}
+                    type="text" 
+                    disabled 
+                /> 
+
+                <br />
                 
                 <br />
 
                 <label for="number" className="formLabels"><b>ID Number: </b> </label>
-                <input id="idNum" name="idNum" type="number" value={idNumber || ''} disabled /> <br />
+                <input 
+                    id="idNum" 
+                    name="idNum" 
+                    type="number" 
+                    value={idNumber || ''}
+                    onChange={(e) => setIDNumber(e.target.value)}
+                     disabled 
+                /> 
+
+                <br />
 
                 <br />
 
                 <label for="service"><b>Service: </b></label>
-                <select name="service" id="serviceStyles">
+                <select 
+                    name="service" 
+                    id="serviceStyles"
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    >
                     <option value="itmanagement">IT Management</option>
                     <option value="consulting">Sustainable Tech Consulting</option>
                     <option value="cybersecurity">Cybersecurity & Risk Management</option>

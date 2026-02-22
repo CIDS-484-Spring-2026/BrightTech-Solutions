@@ -141,6 +141,7 @@ function StandardSignUp(){
                     id="plan" 
                     name="plan" 
                     value={plan}
+                    onChange={(e) => setPlan(e.target.value)}
                     type="text" 
                     disabled 
                 /> 

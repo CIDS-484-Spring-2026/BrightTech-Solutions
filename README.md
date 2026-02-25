@@ -70,7 +70,7 @@ The services that BrightTech Solutions would offer include:
 * Create RDS Database that will contain 3 different tables that will contain information from the "Contact", "Get Started" (Sign Up), and "Log In" pages from the website that are entered by the user
   
 **4/17:**
-* Once all other main objectives are been successfully implemented on time, possibly include an AI chatbot using OpenAI's API
+* Once all other main objectives are been successfully implemented on time, possibly include an AI chatbot using Google Gemini's API
  
 
 ## Milestone 1 Video

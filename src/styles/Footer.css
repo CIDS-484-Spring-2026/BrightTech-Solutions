@@ -1,13 +1,25 @@
 /* COME BACK AND FIX THIS!!!! */
 /* */
 .footerContainer {
+  left: 0;
+  bottom: 0;
   background-color: #1e90ff;
-  height: 315px;
-  color: black;
+  height: 400px;
+  color: white;
   text-align: center;
   padding: 20px 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+}
+
+.footerTitle{
+  color: white;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.footerLogo{
+  height: 95px;
 }
 
 

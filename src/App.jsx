@@ -18,8 +18,9 @@ import './App.css';
 function App() {
   
   return (
-    <div>
-      <BrowserRouter>
+    <div className="mainContainer">
+      <div className="pageWrapper">
+        <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,9 +35,13 @@ function App() {
         </Routes>
         <br />
         <br />
-        <Footer />
-      </BrowserRouter>
-    </div>
+        <br />
+       </BrowserRouter>
+       <Footer />
+      </div>
+      
+    </div> //End of main div element
+    
   );
 }
 

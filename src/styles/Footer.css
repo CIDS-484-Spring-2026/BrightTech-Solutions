@@ -1,6 +1,14 @@
 /* COME BACK AND FIX THIS!!!! */
 /* */
-
+.footerContainer {
+  background-color: #1e90ff;
+  height: 315px;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
 
 
 

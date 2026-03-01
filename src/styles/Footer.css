@@ -2,7 +2,7 @@
 /* */
 .footerContainer {
   left: 0;
-  bottom: 0;
+  /*bottom: 0;*/
   background-color: #1e90ff;
   height: 400px;
   color: white;

@@ -11,6 +11,7 @@ import StandardSignUp from './pages/StandardSignUp';
 import PremiumSignUp from './pages/PremiumSignUp';
 import DeluxeSignUp from './pages/DeluxeSignUp';
 import LogIn from './pages/LogIn';
+import Dashboard from './pages/Dashboard';
 import './index.css';
 import './App.css';
 
@@ -32,10 +33,11 @@ function App() {
           <Route path="/premiumsignup" element={<PremiumSignUp />} />
           <Route path="/deluxesignup" element={<DeluxeSignUp />} />
           <Route path="/login" element={<LogIn />} />
+      
+          <Route path="/dashboard" element={<Dashboard />} />
+          
         </Routes>
-        <br />
-        <br />
-        <br />
+        
        </BrowserRouter>
        <Footer />
       </div>

@@ -1,27 +1,46 @@
 import React from 'react';
 import '../styles/homeStyles.css';
+import { Link, useLocation } from 'react-router-dom';
+import homeImage from '../assets/homeImage.svg';
+
 
 function Home() {
+
+  const location = useLocation();
+
   return (
     <div className="homePageContainer">
+      <br />
       <table className="initialWelcomeMessage_andPhoto">
         <tr>
           <th className="homeCaption">
-            <p>words that will go on the homepage</p>
+            <h1>Get ready to unlock your company's full potential with out services through
+              our expertise services
+            </h1>
+            <br />
+            <br />
+            <Link
+              to="/getstarted"
+                className={`startedButton ${
+                  location.pathname === "/getstarted" ? "active" : ""
+                }`}
+            >
+                
+                Get Started
+            </Link>
           </th>
           <th className="homePicture">
-            <p>home details</p>
+            <img src={homeImage} className="homePageImage"/>
           </th>
         </tr>
       </table>
 
-      <table>
-        <tr>
-          <th className="bottomRow">
-            <p>more words</p>
-          </th>
-        </tr>
-      </table>
+      <br />
+
+      
+
+      
+    
 
 
     </div> //End of main div element

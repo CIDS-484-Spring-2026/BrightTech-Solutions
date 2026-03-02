@@ -9,7 +9,7 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   height: 60px;
-  margin-top: -3.99%;
+  margin-top: -1.99%;
 }
 
 .userLabel{
@@ -21,4 +21,60 @@
   text-align: left;
   height: 400px;
   width: 600px;
+}
+
+
+.column{
+  background-color: #cacaca;
+  padding: 20px;
+  border-color: #b4b4b4;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.topDashContainer{
+  border-collapse: collapse;
+}
+
+.ticket-card{
+  background-color: #ececec;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priority{
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white
+}
+
+.priorityTicketColumn{
+  /*height: 400px;*/
+  width: 300px;
+  border: 1px solid #a1a1a1;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.low{
+  background-color: #ffdd00;
+}
+
+.moderate{
+  background-color: #ff6a00;
+}
+
+.urgent{
+  background-color: #ff3300;
+}
+
+.ticket-card:hover{
+  background-color: #cecece;
+  transform: scale(1.0);
+  transition: 0.5s;
 }

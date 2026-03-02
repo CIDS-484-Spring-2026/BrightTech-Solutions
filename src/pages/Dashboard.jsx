@@ -8,7 +8,7 @@ import {TicketData} from '../data/TicketAnalytics';
 
 function Dashboard(){
 
-    //My practice of a bar chart
+  //My practice of a bar chart
   const chartData = ({
     labels: TicketData.map((data) => data.weekday), 
     datasets: [
@@ -28,25 +28,61 @@ function Dashboard(){
     ]
   });
 
+  //Information for column that displays ticket priority level
+  const tickets = [
+    {id: 1, title: "Login issue", priority: "Low"},
+    {id: 2, title: "Navigation bar issue", priority: "Moderate"},
+    {id: 3, title: "Suspicious log in attempt", priority: "Urgent"},
+    {id: 4, title: "Consultation meeting", priority: "Moderate"},
+    {id: 5, title: "Customer testing", priority: "Low"}
+  ];
+
+  const ticketPriorityClass = (priority) => {
+    switch(priority) {
+        case "Low":
+            return "low priority"
+        case "Moderate":
+            return "moderate priority"
+        case "Urgent":
+            return "urgent priority"
+    }
+  };
+
+
     return(
         <div className= "mainDashContainer">
-            <br />
-            <br />
-            <div className="dashTopBar">
-                <h2>Welcome back, User!</h2>
-            </div>
-
-            <br />
-            <br />
             
+            <div className="topDashContainer">
+                <div className="dashTopBar">
+                    <h2>Welcome back, User!</h2>
+                </div>
 
-            <div className="ticketChartTable">
-                <BarChart chartData={chartData} />
+                <br />
+                <br />
+                
+
+                <div className="ticketChartTable">
+                    <BarChart chartData={chartData} />
+                </div>
+
+                <div className="priorityTicketColumn">
+                    <h2>Recent Support Tickets</h2>
+                    {tickets.map((ticket) => (
+                        <div key={ticket.id} className="ticket-card">
+                            <h4>{ticket.title}</h4>
+                            <span className={ticketPriorityClass(ticket.priority)}>
+                                {ticket.priority}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+
+                <br />
+                <br />
+
             </div>
-
-            <br />
-            <br />
-
+            
+            
 
         </div> //End of main div element
     );

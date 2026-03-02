@@ -7,6 +7,7 @@ function GetStarted(){
 
     return(
         <div className="getStartedPageContainer">
+            <br />
             <table>
                 <tr>
                     <th>
@@ -70,6 +71,9 @@ function GetStarted(){
                 </tr>
                 
             </table>
+
+            <br />
+            <br />
         </div> //End of main div element
     );
 }

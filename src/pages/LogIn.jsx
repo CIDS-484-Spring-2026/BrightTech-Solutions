@@ -96,6 +96,10 @@ function LogIn(){
 
                 <button className="logInSubmit">Log In</button>
             </form>
+
+            <br />
+            <br />
+            
         </div> //End of main div element
     );
 }

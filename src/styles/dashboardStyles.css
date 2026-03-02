@@ -19,4 +19,6 @@
 
 .ticketChartTable{
   text-align: left;
+  height: 400px;
+  width: 600px;
 }

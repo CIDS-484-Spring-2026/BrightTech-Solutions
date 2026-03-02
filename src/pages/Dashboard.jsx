@@ -17,7 +17,7 @@ function Dashboard(){
         data: TicketData.map((data) => data.ticketsAdded),
         backgroundColor: [
           "rgba(75,192,192,1)",
-          "#ecf0f1",
+          "#cce2e8",
           "#50AF95",
           "#f3ba2f",
           "#2a71d0"

@@ -52,6 +52,7 @@ function Contact(){
     return(
         <div>
             <br />
+            <br />
             <form  onSubmit={handleSubmit} className="contactForm">
                 <h2 className="formTitle">We'd like to here from your company!</h2>
                 <p className="formCaption"><i>Please send any questions or concerns, 
@@ -87,7 +88,12 @@ function Contact(){
                 <button className="commentSubmit"><b>Submit</b></button>
 
             </form>
-        </div>
+            <br />
+            <br />
+            <br />
+        </div> //End of main div element
+
+        
         
     );
 }

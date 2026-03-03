@@ -66,7 +66,7 @@ function Dashboard(){
                 </div>
 
                 <div className="priorityTicketColumn">
-                    <h2>Recent Support Tickets</h2>
+                    <h3>Recent Support Tickets</h3>
                     {tickets.map((ticket) => (
                         <div key={ticket.id} className="ticket-card">
                             <h4>{ticket.title}</h4>

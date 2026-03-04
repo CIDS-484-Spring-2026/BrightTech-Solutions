@@ -190,6 +190,11 @@ function PremiumSignUp(){
 
                 <button className="signUpSubmit">Sign Up</button>
             </form>
+
+            <br />
+            <br />
+            <br />
+
         </div> //End of main div element
     );
 

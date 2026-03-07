@@ -58,6 +58,7 @@ function Dashboard(){
                     <h2><img src={profilePic} className="pfp"/> Welcome back, User!</h2>
                 </div>
 
+
                 <br />
                 <br />
 
@@ -66,6 +67,7 @@ function Dashboard(){
                         <div className="ticketChartTable">
                             <BarChart chartData={chartData} />
                         </div>
+
 
                         <br />
 

@@ -14,8 +14,8 @@ function Home() {
       <table className="initialWelcomeMessage_andPhoto">
         <tr>
           <th className="homeCaption">
-            <h1>Get ready to unlock your company's full potential with out services through
-              our expertise services
+            <h1>Get ready to unlock your company's full potential with our skilled
+              professionals and excellent technical services
             </h1>
             <br />
             <br />

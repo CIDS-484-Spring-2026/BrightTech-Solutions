@@ -4,6 +4,7 @@ import '../styles/dashboardStyles.css';
 import { useState, useEffect } from 'react';
 import {BarChart} from '../components/TicketsBar';
 import {TicketData} from '../data/TicketAnalytics';
+import profilePic from '../assets/genericProfilePic.png'
 
 
 function Dashboard(){
@@ -54,28 +55,75 @@ function Dashboard(){
             
             <div className="topDashContainer">
                 <div className="dashTopBar">
-                    <h2>Welcome back, User!</h2>
+                    <h2><img src={profilePic} className="pfp"/> Welcome back, User!</h2>
                 </div>
 
                 <br />
                 <br />
+
+                <div className="innerDashContainer">
+                    <div className="dashDisplayExplanation">
+                        <div className="ticketChartTable">
+                            <BarChart chartData={chartData} />
+                        </div>
+
+                        <br />
+
+                        <div className="priorityTicketColumn">
+                            <h3>Recent Support Tickets</h3>
+                            {tickets.map((ticket) => (
+                                <div key={ticket.id} className="ticket-card">
+                                    <h4>{ticket.title}</h4>
+                                    <span className={ticketPriorityClass(ticket.priority)}>
+                                        {ticket.priority}
+                                    </span>
+                                </div>
+                            ))}
+                        </div> {/*End of priority ticket column*/}
+                    </div> {/*End of dash explanation*/}
+
+                </div> {/*End of inner dash container*/}
+
+
+                <br />
+                <br />
+                <br />
+
+                <div className="colOfThree">
+                    <table className="dashSecondRow">
+                        <tr>
+                            <th className="secondRow1">
+                                <h3>Consulting Hours</h3>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </th>
+
+                            <th className="secondRow2">
+                                <h3>Network Monitoring</h3>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </th>
+
+                            <th className="secondRow3">
+                                <h3>text</h3>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
                 
 
-                <div className="ticketChartTable">
-                    <BarChart chartData={chartData} />
-                </div>
-
-                <div className="priorityTicketColumn">
-                    <h3>Recent Support Tickets</h3>
-                    {tickets.map((ticket) => (
-                        <div key={ticket.id} className="ticket-card">
-                            <h4>{ticket.title}</h4>
-                            <span className={ticketPriorityClass(ticket.priority)}>
-                                {ticket.priority}
-                            </span>
-                        </div>
-                    ))}
-                </div>
+                
 
                 <br />
                 <br />

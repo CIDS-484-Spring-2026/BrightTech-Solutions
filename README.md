@@ -23,6 +23,7 @@ The services that BrightTech Solutions would offer include:
 * HTML
 * CSS
 * AWS
+* Figma (for design)
 * Google Gemini (if there is still time to implement a chatbot using Gemini API Key)
 
 <img width="956" height="505" alt="techStack_image" src="https://github.com/user-attachments/assets/49117191-5943-4987-8792-17cd80d385c0" />

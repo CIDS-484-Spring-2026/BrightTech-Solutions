@@ -3,8 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/dashboardStyles.css'; 
 import { useState, useEffect } from 'react';
 import {BarChart} from '../components/TicketsBar';
+import { RunTimeLineChart } from '../components/RunTimeLineChart';
 import {TicketData} from '../data/TicketAnalytics';
-import profilePic from '../assets/genericProfilePic.png'
+import profilePic from '../assets/genericProfilePic.png';
+
+
 
 
 function Dashboard(){
@@ -49,7 +52,7 @@ function Dashboard(){
     }
   };
 
-
+  
     return(
         <div className= "mainDashContainer">
             
@@ -66,6 +69,7 @@ function Dashboard(){
                     <div className="dashDisplayExplanation">
                         <div className="ticketChartTable">
                             <BarChart chartData={chartData} />
+                            <br />
                         </div>
 
 
@@ -122,15 +126,28 @@ function Dashboard(){
                             </th>
                         </tr>
                     </table>
+                </div> {/* End of second row div element */}
+                
+                <br />
+                <br />
+                <br />
+
+                <div className="runLineContainer">
+                    <RunTimeLineChart />
                 </div>
+
+                <br />
                 
 
                 
 
-                <br />
-                <br />
+                
 
-            </div>
+        
+
+            </div> {/* End of top dash container */}
+
+            
             
             
 

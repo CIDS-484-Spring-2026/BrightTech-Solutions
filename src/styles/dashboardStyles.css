@@ -19,8 +19,8 @@
 
 .ticketChartTable{
   text-align: left;
-  height: 400px;
-  width: 600px;
+  height: 420px;
+  width: 960px;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
   padding: 10px;
@@ -111,4 +111,10 @@
   border-radius: 8px;
   padding: 10px;
   background-color: #ececec;
+}
+
+.runTimeChart{
+  height: 300px;
+  width: 600px;
+  margin: auto;
 }

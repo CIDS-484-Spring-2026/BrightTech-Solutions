@@ -66,11 +66,13 @@ The services that BrightTech Solutions would offer include:
 * Record 5-minute video describing the project
   
 **3/13:**
-* Work on code that will handle AWS API requests
-* Create AWS Lambda function that process information that is received from the API request
-* Create RDS Database that will contain 3 different tables that will contain information from the "Contact", "Get Started" (Sign Up), and "Log In" pages from the website that are entered by the user
+* Work on code that will eventually handle AWS API requests
+* Create AWS Lambda functions that process information that is received from each API request
+* Create the initial framework of what the user dashboard will look like
+
   
 **4/17:**
+* Create RDS Database that will contain 3 different tables that will contain information from the "Contact", "Get Started" (Sign Up), and "Log In" pages from the website that are entered by the user
 * Once all other main objectives are been successfully implemented on time, possibly include an AI chatbot using Google Gemini's API
  
 

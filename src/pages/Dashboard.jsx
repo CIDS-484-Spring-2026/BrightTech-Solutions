@@ -6,6 +6,13 @@ import {BarChart} from '../components/TicketsBar';
 import { RunTimeLineChart } from '../components/RunTimeLineChart';
 import {TicketData} from '../data/TicketAnalytics';
 import profilePic from '../assets/genericProfilePic.png';
+import runTimeButton from '../assets/runTimeButton.svg';
+import engagementButton from '../assets/engagementButton.svg';
+import productivityButton from '../assets/productivityButton.svg';
+import uniqueVisitorsButton from '../assets/uniqueVisitorsButton.svg';
+import { EngagementLineChart } from '../components/EngagementLineChart';
+import { ProductivityLineChart } from '../components/ProductivityLineChart';
+import { UniqueVisitorsLineChart } from '../components/UniqueVisitorsLineChart';
 
 
 
@@ -51,6 +58,33 @@ function Dashboard(){
             return "urgent priority"
     }
   };
+
+  //Buttons dropdown menu for 3rd row (line charts)
+  const [runOpen, setRunOpen] = useState(false);
+  const [engagementOpen, setEngagementOpen] = useState(false);
+  const [productivityOpen, setProductivityOpen] = useState(false);
+  const [uniqueVisitorsOpen, setUniqueVisitorsOpen] = useState(false);
+
+  const toggleRunDropdown = () => {
+    setRunOpen(!runOpen);
+  };
+
+  const toggleEngagementDropdown = () => {
+    setEngagementOpen(!engagementOpen);
+  };
+
+  const toggleProductivityDropdown = () => {
+    setProductivityOpen(!productivityOpen);
+  };
+
+  const toggleUniqueVisitorsDropdown = () => {
+    setUniqueVisitorsOpen(!uniqueVisitorsOpen);
+  };
+
+  //Note to self: Even though page current renders as blank,
+  //it is only because the other line charts and buttons have not been created yet
+  //and most likely because all are still linked to the run time chart
+  //just add & fix those things and everything should be fine
 
   
     return(
@@ -129,12 +163,53 @@ function Dashboard(){
                 </div> {/* End of second row div element */}
                 
                 <br />
-                <br />
-                <br />
+            
 
-                <div className="runLineContainer">
-                    <RunTimeLineChart />
-                </div>
+                <div className="thirdDashRow">
+                    <div className="thirdDashColumn">
+                        <img src={runTimeButton} onClick={toggleRunDropdown} className="runTimeButton"/>
+                        <div className="dropdown-LineContainer">
+                            <div className={`runLineContainer ${runOpen ? 'open' : 'closed'}`}>
+                                <RunTimeLineChart />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="thirdDashColumn">
+                        <img src={engagementButton} onClick={toggleEngagementDropdown} className="engagementButton"/>
+                        <div className="dropdown-LineContainer">
+                            <div className={`engagementContainer ${engagementOpen ? 'open' : 'closed'}`}>
+                                <EngagementLineChart />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="thirdDashColumn">
+                        <img src={productivityButton} onClick={toggleProductivityDropdown} className="productivityButton"/>
+                        <div className="dropdown-LineContainer">
+                            <div className={`productivityContainer ${productivityOpen ? 'open' : 'closed'}`}>
+                                <ProductivityLineChart />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="thirdDashColumn">
+                        <img src={uniqueVisitorsButton} onClick={toggleUniqueVisitorsDropdown} className="uniqueVisitorsButton"/>
+                        <div className="dropdown-LineContainer">
+                            <div className={`uniqueVisitorsContainer ${uniqueVisitorsOpen ? 'open' : 'closed'}`}>
+                                <UniqueVisitorsLineChart />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div> {/* END OF MAIN 3RD DASH ROW CONTAINER!!! */}
+                
+                
+                
 
                 <br />
                 

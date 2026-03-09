@@ -19,7 +19,7 @@
 
 .ticketChartTable{
   text-align: left;
-  height: 420px;
+  height: 440px;
   width: 960px;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
@@ -62,7 +62,7 @@
   border-radius: 8px;
   padding: 10px;
   display: block;
-  margin-left: 12%;
+  margin-left: 4.34%;
 }
 
 .low{
@@ -113,8 +113,81 @@
   background-color: #ececec;
 }
 
-.runTimeChart{
+.runTimeChart, .engagementTimeChart, .productivityChart, .uniqueVisitorsChart{
   height: 300px;
   width: 600px;
   margin: auto;
+}
+
+
+/* Styling for the 3rd row line charts dropdown menu */
+
+.dropdown-LineContainer{
+  position: relative;
+}
+
+.dropdown-button{
+  width: 90px;
+  height: 90px;
+  
+}
+
+.runTimeButton, .engagementButton,
+ .productivityButton, .uniqueVisitorsButton {
+  border: 1px solid #d3d3d3;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+
+.runTimeButton:hover, .engagementButton:hover,
+.productivityButton:hover, .uniqueVisitorsButton:hover{
+  background-color: #6c6c6c;
+  border: 4px solid #d3d3d3;
+  transition: 0.3s;
+
+}
+
+
+.runLineContainer, .engagementContainer,
+ .productivityContainer, .uniqueVisitorsContainer{
+  /* Will start hidden and the go through a transition */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, ease-in-out, opacity 0.5s ease-in-out;
+
+  
+  /*background-color: #f9f9f9;*/
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 1;
+}
+
+.runLineContainer.open, .engagementContainer.open,
+ .productivityContainer.open, .uniqueVisitorsContainer.open{
+  max-height: 500px;
+  opacity: 1;
+}
+
+
+
+.thirdDashRow{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+
+.thirdDashColumn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }

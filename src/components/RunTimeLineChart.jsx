@@ -32,7 +32,7 @@ export const RunTimeLineChart = () => {
         datasets: [
             {
                 label: "Monthly Run Time",
-                data: [5, 7, 10, 4, 3, 2],
+                data: [5, 7, 10, 4, 2, 3],
                 borderColor: 'rgb(75, 192, 192)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 tension: 0.1,

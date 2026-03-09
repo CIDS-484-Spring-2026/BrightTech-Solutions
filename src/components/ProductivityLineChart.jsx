@@ -32,7 +32,7 @@ export const ProductivityLineChart = () => {
         datasets: [
             {
                 label: "Monthly Productivity",
-                data: [5, 7, 10, 4, 3, 2],
+                data: [150, 190, 140, 166, 171, 195],
                 borderColor: 'rgb(72, 45, 246)',
                 backgroundColor: 'rgba(80, 58, 191, 0.2)',
                 tension: 0.1,

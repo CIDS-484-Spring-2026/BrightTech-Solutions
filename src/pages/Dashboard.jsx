@@ -81,10 +81,7 @@ function Dashboard(){
     setUniqueVisitorsOpen(!uniqueVisitorsOpen);
   };
 
-  //Note to self: Even though page current renders as blank,
-  //it is only because the other line charts and buttons have not been created yet
-  //and most likely because all are still linked to the run time chart
-  //just add & fix those things and everything should be fine
+  
 
   
     return(

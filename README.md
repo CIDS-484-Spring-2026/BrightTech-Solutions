@@ -69,6 +69,7 @@ The services that BrightTech Solutions would offer include:
 * Work on code that will eventually handle AWS API requests
 * Create AWS Lambda functions that process information that is received from each API request
 * Create the initial framework of what the user dashboard will look like
+* Record 5-minute video discussing updates on the project
 
   
 **4/17:**

@@ -6,13 +6,16 @@ import {BarChart} from '../components/TicketsBar';
 import { RunTimeLineChart } from '../components/RunTimeLineChart';
 import {TicketData} from '../data/TicketAnalytics';
 import profilePic from '../assets/genericProfilePic.png';
-import runTimeButton from '../assets/runTimeButton.svg';
-import engagementButton from '../assets/engagementButton.svg';
-import productivityButton from '../assets/productivityButton.svg';
-import uniqueVisitorsButton from '../assets/uniqueVisitorsButton.svg';
+import runTimeButton2 from '../assets/runTimeButton2.svg';
+import engagementButton2 from '../assets/engagementButton2.svg';
+import productivityButton2 from '../assets/productivityButton2.svg';
+import uniqueVisitorsButton2 from '../assets/uniqueVisitorsButton2.svg';
 import { EngagementLineChart } from '../components/EngagementLineChart';
 import { ProductivityLineChart } from '../components/ProductivityLineChart';
 import { UniqueVisitorsLineChart } from '../components/UniqueVisitorsLineChart';
+import consultingHoursIcon from '../assets/consultingHoursIcon.svg';
+import serviceTicketIcon from '../assets/serviceTicketIcon.svg';
+import serviceUpTimeIcon from '../assets/serviceUpTimeIcon.svg';
 
 
 
@@ -89,8 +92,14 @@ function Dashboard(){
             
             <div className="topDashContainer">
                 <div className="dashTopBar">
-                    <h2><img src={profilePic} className="pfp"/> Welcome back, User!</h2>
+                    <h2><img src={profilePic} className="pfp"/> Dashboard</h2>
                 </div>
+
+                <div className="dashWelcomeMessage">
+                    <h2>Welcome Back!</h2>
+                    <p>Take a look at your recent services and activities</p>
+                </div>    
+                
 
 
                 <br />
@@ -105,8 +114,9 @@ function Dashboard(){
 
 
                         <br />
+                        
 
-                        <div className="priorityTicketColumn">
+                      {/*  <div className="priorityTicketColumn">
                             <h3>Recent Support Tickets</h3>
                             {tickets.map((ticket) => (
                                 <div key={ticket.id} className="ticket-card">
@@ -116,7 +126,9 @@ function Dashboard(){
                                     </span>
                                 </div>
                             ))}
-                        </div> {/*End of priority ticket column*/}
+                        </div> {/*End of priority ticket column*/} 
+
+
                     </div> {/*End of dash explanation*/}
 
                 </div> {/*End of inner dash container*/}
@@ -125,35 +137,21 @@ function Dashboard(){
                 <br />
                 <br />
                 <br />
+                
 
                 <div className="colOfThree">
                     <table className="dashSecondRow">
                         <tr>
                             <th className="secondRow1">
-                                <h3>Consulting Hours</h3>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <img src={consultingHoursIcon} />
                             </th>
 
                             <th className="secondRow2">
-                                <h3>Network Monitoring</h3>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                               <img src={serviceTicketIcon} />
                             </th>
 
                             <th className="secondRow3">
-                                <h3>text</h3>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <img src={serviceUpTimeIcon} />
                             </th>
                         </tr>
                     </table>
@@ -164,16 +162,16 @@ function Dashboard(){
 
                 <div className="thirdDashRow">
                     <div className="thirdDashColumn">
-                        <img src={runTimeButton} onClick={toggleRunDropdown} className="runTimeButton"/>
+                        <img src={runTimeButton2} onClick={toggleRunDropdown} className="runTimeButton"/>
                         <div className="dropdown-LineContainer">
                             <div className={`runLineContainer ${runOpen ? 'open' : 'closed'}`}>
                                 <RunTimeLineChart />
-                            </div>
+                            </div> 
                         </div>
                     </div>
 
                     <div className="thirdDashColumn">
-                        <img src={engagementButton} onClick={toggleEngagementDropdown} className="engagementButton"/>
+                        <img src={engagementButton2} onClick={toggleEngagementDropdown} className="engagementButton"/>
                         <div className="dropdown-LineContainer">
                             <div className={`engagementContainer ${engagementOpen ? 'open' : 'closed'}`}>
                                 <EngagementLineChart />
@@ -183,7 +181,7 @@ function Dashboard(){
 
 
                     <div className="thirdDashColumn">
-                        <img src={productivityButton} onClick={toggleProductivityDropdown} className="productivityButton"/>
+                        <img src={productivityButton2} onClick={toggleProductivityDropdown} className="productivityButton"/>
                         <div className="dropdown-LineContainer">
                             <div className={`productivityContainer ${productivityOpen ? 'open' : 'closed'}`}>
                                 <ProductivityLineChart />
@@ -193,7 +191,7 @@ function Dashboard(){
 
 
                     <div className="thirdDashColumn">
-                        <img src={uniqueVisitorsButton} onClick={toggleUniqueVisitorsDropdown} className="uniqueVisitorsButton"/>
+                        <img src={uniqueVisitorsButton2} onClick={toggleUniqueVisitorsDropdown} className="uniqueVisitorsButton"/>
                         <div className="dropdown-LineContainer">
                             <div className={`uniqueVisitorsContainer ${uniqueVisitorsOpen ? 'open' : 'closed'}`}>
                                 <UniqueVisitorsLineChart />
@@ -204,6 +202,18 @@ function Dashboard(){
 
 
                 </div> {/* END OF MAIN 3RD DASH ROW CONTAINER!!! */}
+
+                <div className="priorityTicketColumn">
+                    <h3>Recent Support Tickets</h3>
+                    {tickets.map((ticket) => (
+                        <div key={ticket.id} className="ticket-card">
+                            <h4>{ticket.title}</h4>
+                            <span className={ticketPriorityClass(ticket.priority)}>
+                                {ticket.priority}
+                            </span>
+                        </div>
+                    ))}
+                </div> {/*End of priority ticket column*/}
                 
                 
                 

@@ -32,7 +32,7 @@ export const EngagementLineChart = () => {
         datasets: [
             {
                 label: "Monthly Engagement Time",
-                data: [6, 7, 12, 4.5, 10, 8],
+                data: [135, 125, 155, 120, 115, 112],
                 borderColor: 'rgb(112, 141, 237)',
                 backgroundColor: 'rgba(54, 107, 168, 0.2)',
                 tension: 0.1,

@@ -12,6 +12,10 @@
   margin-top: -1.99%;
 }
 
+.dashWelcomeMessage{
+  text-align: left;
+}
+
 .userLabel{
   text-align: right;
   margin-left: 73%;
@@ -19,11 +23,15 @@
 
 .ticketChartTable{
   text-align: left;
-  height: 440px;
+  height: 590px;
   width: 960px;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
   padding: 10px;
+
+  
+
+
 }
 
 
@@ -86,6 +94,10 @@
 
 .innerDashContainer{
   border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .dashDisplayExplanation{

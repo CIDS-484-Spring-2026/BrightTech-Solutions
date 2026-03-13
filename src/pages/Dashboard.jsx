@@ -62,6 +62,28 @@ function Dashboard(){
     }
   };
 
+  //Information column that displays network monitoring
+  const services = [
+    {serviceName: "API Gateway", status: "Online", uptime: "99.8%"},
+    {serviceName: "DNS Server", status: "Online", uptime: "99.9%"},
+    {serviceName: "Database", status: "Online", uptime: "98.7%"},
+    {serviceName: "SMPT", status: "Online", uptime: "99.6%"},
+    {serviceName: "VoIP", status: "Offline", uptime: "99.9%"}
+  ];
+
+  const networkMonitoring = (status) => {
+    switch(status) {
+        case "Online":
+            return "status online"
+        case "Offline":
+            return "status offline"
+    }
+  };
+
+
+
+
+
   //Buttons dropdown menu for 3rd row (line charts)
   const [runOpen, setRunOpen] = useState(false);
   const [engagementOpen, setEngagementOpen] = useState(false);
@@ -203,19 +225,44 @@ function Dashboard(){
 
                 </div> {/* END OF MAIN 3RD DASH ROW CONTAINER!!! */}
 
-                <div className="priorityTicketColumn">
-                    <h3>Recent Support Tickets</h3>
-                    {tickets.map((ticket) => (
-                        <div key={ticket.id} className="ticket-card">
-                            <h4>{ticket.title}</h4>
-                            <span className={ticketPriorityClass(ticket.priority)}>
-                                {ticket.priority}
-                            </span>
-                        </div>
-                    ))}
-                </div> {/*End of priority ticket column*/}
+                <div className="tickets-and-monitoringRow">
+                    <div className="priorityTicketColumn">
+                        <h3>Recent Support Tickets</h3>
+                        {tickets.map((ticket) => (
+                            <div key={ticket.id} className="ticket-card">
+                                <span>{ticket.title}</span>
+                                <span className={ticketPriorityClass(ticket.priority)}>
+                                    {ticket.priority}
+                                </span>
+                            </div>
+                        ))}
+                    </div> {/*End of priority ticket column*/}
+
+                    <br />
+
+                    <div className="networkMonitoringColumn">
+                        <h3>Network Monitoring</h3>
+                        {services.map((service) => (
+                            <div>
+                                <div key={service.serviceName} className="service-card">  
+                                    <span className="service-name">
+                                        {service.serviceName}
+                                    </span>
+
+                                    <span className="service-uptime">
+                                        {service.uptime}
+                                    </span>
+                                        
+                                    <span className={networkMonitoring(service.status)}>
+                                        {service.status}
+                                    </span>
+                                </div>
+                                
+                            </div>
+                        ))}
+                    </div> {/*End of the service monitoring column*/}
                 
-                
+                </div> {/*End of tickets and monitoring row div element */}
                 
 
                 <br />

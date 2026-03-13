@@ -28,10 +28,6 @@
   border: 1px solid #d3d3d3;
   border-radius: 8px;
   padding: 10px;
-
-  
-
-
 }
 
 
@@ -47,7 +43,7 @@
   border-collapse: collapse;
 }
 
-.ticket-card{
+.ticket-card {
   background-color: #ececec;
   padding: 12px;
   margin-bottom: 10px;
@@ -57,14 +53,35 @@
   align-items: center;
 }
 
-.priority{
+.service-card{
+  background-color: #ececec;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 1fr 80px 100px;
+  align-items: center;
+}
+
+.service-uptime{
+  text-align: center;
+  font-weight: bold;
+}
+
+.service-name{
+  text-align: left;
+}
+
+
+
+.priority, .status {
   padding: 6px 12px;
   border-radius: 15px;
   font-weight: bold;
-  color: white
 }
 
-.priorityTicketColumn{
+.priorityTicketColumn {
   width: 500px;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
@@ -73,23 +90,53 @@
   margin-left: 4.34%;
 }
 
+.networkMonitoringColumn {
+  width: 500px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  padding: 10px;
+  display: block;
+  margin-left: 4.34%;
+}
+
+
+
 .low{
-  background-color: #ffdd00;
+  background-color: #f3e58a;
+  color: #6b6331
 }
 
 .moderate{
-  background-color: #ff6a00;
+  background-color: #f1a670;
+  color: #894f25;
 }
 
 .urgent{
-  background-color: #ff3300;
+  background-color: #f7886c;
+  color: #7e3725;
 }
 
-.ticket-card:hover{
+.online{
+  background-color:#7bea88;
+  color: #245c2a;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.offline{
+  background-color: rgb(224, 152, 108);
+  color: rgb(116, 71, 43);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.ticket-card:hover, .service-card:hover{
   background-color: #cecece;
   transform: scale(1.0);
   transition: 0.5s;
 }
+
+
 
 
 .innerDashContainer{
@@ -202,4 +249,17 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.tickets-and-monitoringRow{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.priorityTicketColumn, .networkMonitoringColumn{
+  flex: 1;
+  max-width: 500px;
 }

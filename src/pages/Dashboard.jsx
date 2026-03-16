@@ -51,6 +51,10 @@ function Dashboard(){
     {id: 5, title: "Customer testing", priority: "Low"}
   ];
 
+  const [generalTickets, setGeneralTickets] = useState(tickets);
+  const [newTicketTitle, setNewTicketTitle] = useState("");
+  const [selectedPriority, setSelectedPriority] = useState("Low");
+
   const ticketPriorityClass = (priority) => {
     switch(priority) {
         case "Low":
@@ -61,6 +65,47 @@ function Dashboard(){
             return "urgent priority"
     }
   };
+
+  //Getting the priority color for each ticket entry
+  const getPriorityColor = (priority) => {
+    switch(priority) {
+        case "Low":
+            return "priority-low"
+        case "Moderate":
+            return "priority-moderate"
+        case "Urgent":
+            return "priority-urgent"
+    }
+  };
+
+
+  const addTicket = () => {
+    if(newTicketTitle.trim()) {
+        const newTicket = {
+            //id: Date.now().toString(),
+            title: newTicketTitle,
+            priority: selectedPriority,
+            date: new Date().toLocaleDateString("en-US", {
+                month: "short",
+                date: "numeric",
+                year: "numeric"
+            })
+        };
+        setGeneralTickets([...generalTickets, newTicket]);
+        setNewTicketTitle("");
+    }
+  };
+
+  
+  const removeTicket = (id) => {
+    setGeneralTickets(generalTickets.filter((ticket) => ticket.id !== id));
+  };
+
+
+
+
+
+
 
   //Information column that displays network monitoring
   const services = [
@@ -228,13 +273,99 @@ function Dashboard(){
                 <div className="tickets-and-monitoringRow">
                     <div className="priorityTicketColumn">
                         <h3>Recent Support Tickets</h3>
-                        {tickets.map((ticket) => (
-                            <div key={ticket.id} className="ticket-card">
-                                <span>{ticket.title}</span>
-                                <span className={ticketPriorityClass(ticket.priority)}>
-                                    {ticket.priority}
-                                </span>
-                            </div>
+
+                        <div className="ticketEntryContainer">
+                            <input className="ticketEntry"
+                                placeholder = "Enter ticket title..."
+                                value={newTicketTitle}
+                                onChange={(e) => setNewTicketTitle(e.target.value)}
+                                onKeyDown={(e) => e.key === "Enter" && addTicket()}
+                            />
+
+
+                            <button 
+                            className="addTicketButton"
+                            onClick={addTicket}>
+                                + Add
+                            </button>
+
+                            <br />
+                    
+
+                            
+                        </div> {/* End of ticket entry container div element */}
+
+                        <div className="prioritySelection">
+                            <button
+                                onClick={() => setSelectedPriority("Low")}
+                                className={`lowSelection ${
+                                    selectedPriority === "Low"
+                                    ? "priority-low"
+                                    : "priority-button"
+                                }`}
+                            >
+                                Low
+                            </button>
+
+                            <button
+                                onClick={() => setSelectedPriority("Moderate")}
+                                className={`moderateSelection ${
+                                    selectedPriority === "Moderate"
+                                    ? "priority-moderate"
+                                    : "priority-button"
+                                }`}
+                            >
+                                Moderate
+                            </button>
+
+
+                            <button
+                                onClick={() => setSelectedPriority("Urgent")}
+                                className={`urgentSelection ${
+                                    selectedPriority === "Urgent"
+                                    ? "priority-urgent"
+                                    : "priority-button"
+                                }`}
+                            >
+                                Urgent
+                            </button>
+
+
+                        </div> 
+                        
+                        {generalTickets.map((ticket) => (
+                            <div>
+                                <br />
+                                <div key={ticket.id} className="ticket-card">
+                                    
+                                    <span className="ticket-title">{ticket.title}</span>
+
+                                    <div className="ticketRightAlign">
+                                        <span className={ticketPriorityClass(ticket.priority)}>
+                                            {ticket.priority}
+                                        </span>
+                                    </div>
+
+                                    <button 
+                                        onClick={() => removeTicket(ticket.id)}
+                                        className="deleteTicket"
+                                        style={{
+                                            background: "transparent",
+                                            border: "none",
+                                            color: "red"
+                                        }}>
+                                            X
+                                    </button>
+                                </div>
+
+
+                                <div>
+                                    
+
+                                    
+                                </div>
+
+                            </div> //End of main div element
                         ))}
                     </div> {/*End of priority ticket column*/}
 

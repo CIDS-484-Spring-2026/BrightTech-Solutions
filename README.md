@@ -82,7 +82,7 @@ The services that BrightTech Solutions would offer include:
 
 
 ## Milestone 2 Video
-Text will be replaced with video for 2nd milestone.
+[Milestone 2 Video](https://mediaspace.wisconsin.edu/media/Milestone+2/1_kb0534a1)
 
 
 

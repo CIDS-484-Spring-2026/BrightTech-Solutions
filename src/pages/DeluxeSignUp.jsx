@@ -22,7 +22,7 @@ function DeluxeSignUp(){
     
         //const navigate = useNavigate(); **Will take users to next page**
     
-        const standardFormData = {
+        const deluxeFormData = {
             companyName,
             email,
             adminName,
@@ -38,7 +38,7 @@ function DeluxeSignUp(){
                 headers: {
                     "Content-Type": "application/JSON"
                 },
-                body: JSON.stringify(standardFormData)
+                body: JSON.stringify(deluxeFormData)
             })
     
             if(!response.ok) {

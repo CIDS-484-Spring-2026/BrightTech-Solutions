@@ -22,7 +22,7 @@ function PremiumSignUp(){
         
         //const navigate = useNavigate(); **Will take users to next page**
         
-        const standardFormData = {
+        const premiumData = {
             companyName,
             email,
             adminName,
@@ -38,7 +38,7 @@ function PremiumSignUp(){
                 headers: {
                     "Content-Type": "application/JSON"
                 },
-                body: JSON.stringify(standardFormData)
+                body: JSON.stringify(premiumFormData)
             })
         
             if(!response.ok) {

@@ -20,6 +20,8 @@ The services that BrightTech Solutions would offer include:
 * Vite
 * JSX
 * JS
+* Node.js
+* Chart.js
 * HTML
 * CSS
 * AWS

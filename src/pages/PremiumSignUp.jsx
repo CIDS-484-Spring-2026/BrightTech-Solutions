@@ -22,7 +22,7 @@ function PremiumSignUp(){
         
         //const navigate = useNavigate(); **Will take users to next page**
         
-        const premiumData = {
+        const premiumFormData = {
             companyName,
             email,
             adminName,

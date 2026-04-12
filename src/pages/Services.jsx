@@ -4,10 +4,11 @@ import itManagementImage from '../assets/itManagementImage.jpg';
 import sustainableTechImage from '../assets/sustainableTechImage.jpg';
 import cybersecurityImage from '../assets/cybersecurityImage.jpg';
 import uxImage from '../assets/uxImage.jpg';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Services(){
-    
+    const location = useLocation();
 
     return (
     <div>
@@ -162,10 +163,31 @@ function Services(){
         <br />
         <br />
         <br />
-      </div>
+      </div> {/*End of UX container */}
 
+      <hr className="horizontalLine"></hr>
 
+      <br />
+      
 
+      <h1>Still Curious About These Industries?</h1>
+      <p style={{fontSize: "1.3em"}}>Ask BrightBot, our AI-powered assistant tool to learn even more about 
+        the background of the services we offer.
+      </p>
+      <br />
+
+      <Link
+        to="/chatbot"
+        className={`brightBotButton ${
+          location.pathname === "/chatbot" ? "active" : ""
+        }`}
+      >
+        <b>Ask BrightBot</b>
+      </Link>
+
+      <br />
+      <br />
+      <br />
 
 
 

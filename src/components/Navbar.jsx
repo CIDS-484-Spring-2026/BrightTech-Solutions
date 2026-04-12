@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../styles/Navbar.css';  // <- correct relative path
+import '../styles/Navbar.css';  
 import logo from '../assets/brightTech_logo.svg';
 
 function Navbar() {

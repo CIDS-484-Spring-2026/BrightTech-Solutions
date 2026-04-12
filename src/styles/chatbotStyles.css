@@ -1,0 +1,21 @@
+.brightBotButton {
+  margin: 0;
+  margin-left: 1.93%;
+  display: inline-block;   
+  /*padding: 12px 24px;*/
+  padding: 24px 36px;
+  font-size: 1.5em;
+  background-color: #243979;
+  color: white;
+  text-decoration: none;   
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+.brightBotButton:hover{
+  background-color: #1e90ff;
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: yellow;
+}

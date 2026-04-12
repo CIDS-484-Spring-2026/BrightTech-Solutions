@@ -159,7 +159,7 @@ function Dashboard(){
             
             <div className="topDashContainer">
                 <div className="dashTopBar">
-                    <h2><img src={profilePic} className="pfp"/> Dashboard</h2>
+                    <h2><img src={profilePic} className="pfp"/> </h2>
                 </div>
 
                 <div className="dashWelcomeMessage">

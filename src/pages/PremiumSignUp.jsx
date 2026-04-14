@@ -2,10 +2,11 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/signUpStyles.css'; 
 import { useState, useEffect } from 'react';
-//import { useNavigate } from 'react-router-dom'; **COME BACK AND USE LATER**
+import { useNavigate } from 'react-router-dom'; 
 
 function PremiumSignUp(){
     const location = useLocation();
+    const navigate = useNavigate(); 
 
     //Creating variables that will be sent to the database
     const [idNumber, setIDNumber] = useState(null);
@@ -20,7 +21,6 @@ function PremiumSignUp(){
     const handleSubmit = async(event) => {
         event.preventDefault();
         
-        //const navigate = useNavigate(); **Will take users to next page**
         
         const premiumFormData = {
             companyName,
@@ -33,10 +33,10 @@ function PremiumSignUp(){
         };
         
         try {
-            const response = await fetch("API URL HERE",{
+            const response = await fetch("http://localhost:5000/add-user",{
                 method: 'POST',
                 headers: {
-                    "Content-Type": "application/JSON"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(premiumFormData)
             })
@@ -49,7 +49,7 @@ function PremiumSignUp(){
         
             console.log("Success: ", result);
             alert("Form submission successful. Thank you for your input!")
-            //navigate('/dashboard') **will ideally lead user to dashboard**
+            navigate('/dashboard') 
         
         
         } catch (error){
@@ -80,7 +80,7 @@ function PremiumSignUp(){
                 <p className="formCaption"><i>Please fill out your company's information</i></p>
                 <br />
 
-                <label for="text" className="formLabels"><b>Company Name: </b> </label>
+                <label htmlFor="text" className="formLabels"><b>Company Name: </b> </label>
                 <input 
                     type="text" 
                     name="companyName" 
@@ -94,7 +94,7 @@ function PremiumSignUp(){
 
                 <br />
 
-                <label for="email" className="formLabels"><b>Email: </b> </label>
+                <label htmlFor="email" className="formLabels"><b>Email: </b> </label>
                 <input 
                     type="email" 
                     name="email" 
@@ -108,7 +108,7 @@ function PremiumSignUp(){
 
                 <br />
 
-                <label for="text" className="formLabels"><b>Admin Name: </b> </label>
+                <label htmlFor="text" className="formLabels"><b>Admin Name: </b> </label>
                 <input 
                     type="text" 
                     name="adminName" 
@@ -122,7 +122,7 @@ function PremiumSignUp(){
 
                 <br />
 
-                <label for="password" className="formLabels"><b>Create Password: </b> </label>
+                <label htmlFor="password" className="formLabels"><b>Create Password: </b> </label>
                 <input 
                     type="password"  
                     id="myPassword" 
@@ -137,7 +137,7 @@ function PremiumSignUp(){
 
                 <br />
 
-                <label for="text" className="formLabels"><b>Plan: </b> </label>
+                <label htmlFor="text" className="formLabels"><b>Plan: </b> </label>
                 <input 
                     id="plan" 
                     name="plan" 
@@ -151,7 +151,7 @@ function PremiumSignUp(){
                 
                 <br />
 
-                <label for="number" className="formLabels"><b>ID Number: </b> </label>
+                <label htmlFor="number" className="formLabels"><b>ID Number: </b> </label>
                 <input 
                     id="idNum" 
                     name="idNum" 
@@ -165,13 +165,14 @@ function PremiumSignUp(){
 
                 <br />
 
-                <label for="service"><b>Service: </b></label>
+               
                 <select 
                     name="service" 
                     id="serviceStyles"
                     value={service}
                     onChange={(e) => setService(e.target.value)}
                 >
+                    <option value="">--Select a Service--</option>
                     <option value="itmanagement">IT Management</option>
                     <option value="consulting">Sustainable Tech Consulting</option>
                     <option value="cybersecurity">Cybersecurity & Risk Management</option>

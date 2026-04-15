@@ -24,14 +24,15 @@ The services that BrightTech Solutions would offer include:
 * Chart.js
 * HTML
 * CSS
-* AWS
+* PostgreSQL
+* SQL Tools (Extension)
 * Figma (for design)
 * Google Gemini (if there is still time to implement a chatbot using Gemini API Key)
 
 <img width="956" height="505" alt="techStack_image" src="https://github.com/user-attachments/assets/49117191-5943-4987-8792-17cd80d385c0" />
 
 
-## AWS Implementation Logic
+## Database Logic
 
 <img width="1021" height="232" alt="BrightTechAWS drawio" src="https://github.com/user-attachments/assets/7028fdae-62cb-4717-9d35-309b2b1c7c75" />
 

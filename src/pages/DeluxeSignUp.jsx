@@ -32,7 +32,7 @@ function DeluxeSignUp(){
             service
         };
         
-
+        //Tries to form connection between front-end and database
         try {
             const response = await fetch("http://localhost:5000/add-user",{
                 method: 'POST',
@@ -49,10 +49,10 @@ function DeluxeSignUp(){
             const result = await response.json();
     
             console.log("Success: ", result);
-            alert("Form submission successful. Thank you for your input!")
+            alert("Form submission successful. Welcome to BrightTech Solutions!")
             navigate('/dashboard') 
     
-    
+        //Routes to status code 500 message if something goes wrong
         } catch (error){
             console.error("Error with form submission: ", error);
             alert("Form submission failed. Please try again later");

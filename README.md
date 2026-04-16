@@ -34,10 +34,9 @@ The services that BrightTech Solutions would offer include:
 
 ## Database Logic
 
-<img width="1021" height="232" alt="BrightTechAWS drawio" src="https://github.com/user-attachments/assets/7028fdae-62cb-4717-9d35-309b2b1c7c75" />
-
-<img alt="Database Setup" src="https://github.com/user-attachments/assets/database_and_code.png"  />
-<img alt="Database Connection" src="![alt text](image.png)"  />
+The form information (specifically from the Contact, Get Started, and Log In pages) will be saved in a database
+created using PostgreSQL, with the assistance of the VS Code extension SQL Tools. The database itself will 
+connect to the server through the port number 5000, and will store user information each time it is uploaded.
 
 
 ## Website Sections (On the Navigation Bar)

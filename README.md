@@ -36,6 +36,8 @@ The services that BrightTech Solutions would offer include:
 
 <img width="1021" height="232" alt="BrightTechAWS drawio" src="https://github.com/user-attachments/assets/7028fdae-62cb-4717-9d35-309b2b1c7c75" />
 
+<img width="1021" height="232" alt="Database Setup" src="assets/database_and_code.png"  />
+<img width="1021" height="232" alt="Database Connection" src="assets/database_connection.png"  />
 
 
 ## Website Sections (On the Navigation Bar)

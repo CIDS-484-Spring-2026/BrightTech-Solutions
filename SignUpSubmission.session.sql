@@ -12,3 +12,12 @@ CREATE TABLE sign_up_info (
 
 ALTER TABLE sign_up_info
 ADD COLUMN adminName VARCHAR(100) NOT NULL;
+
+CREATE TABLE comment_info (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(100) NOT NULL,
+    comment VARCHAR(100) NOT NULL
+);
+
+DELETE FROM comment_info
+WHERE id IN (1, 2, 3, 4, 5, 6);

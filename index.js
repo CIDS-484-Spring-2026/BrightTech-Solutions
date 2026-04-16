@@ -25,5 +25,22 @@ app.post('/add-user', async (req, res) => {
     }
 });
 
+app.post('/add-comment', async (req, res) => {
+    console.log("HEADERS:", req.headers);
+    console.log("BODY:", req.body);
+
+    const {email, comment} = req.body;
+
+    try {
+        const newComment = await pool.query(
+            "INSERT INTO comment_info (email, comment) VALUES ($1, $2) RETURNING *",
+            [email, comment]
+        )
+    } catch(err){
+        console.error("FULL ERROR:", err.stack);
+        res.status(500).json({error: err.message});
+    }
+});
+
 app.listen(5000, () =>
     console.log("The server will run on port 5000"));

@@ -79,6 +79,7 @@ connect to the server through the port number 5000, and will store user informat
 **4/17:**
 * Create RDS Database that will contain 3 different tables that will contain information from the "Contact", "Get Started" (Sign Up), and "Log In" pages from the website that are entered by the user
 * Once all other main objectives are been successfully implemented on time, possibly include an AI chatbot using Google Gemini's API
+* Record 5-minute video disucssing some of the final updates of the project
  
 
 ## Milestone 1 Video

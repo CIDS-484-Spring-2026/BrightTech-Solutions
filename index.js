@@ -35,7 +35,32 @@ app.post('/add-comment', async (req, res) => {
         const newComment = await pool.query(
             "INSERT INTO comment_info (email, comment) VALUES ($1, $2) RETURNING *",
             [email, comment]
-        )
+        );
+        res.json(newComment.rows[0]);
+    } catch(err){
+        console.error("FULL ERROR:", err.stack);
+        res.status(500).json({error: err.message});
+    }
+});
+
+app.post('/login', async (req, res) => {
+    console.log("HEADERS:", req.headers);
+    console.log("BODY:", req.body);
+
+    const {email, password} = req.body;
+
+    try {
+        const logInAttempt = await pool.query(
+            "SELECT * FROM sign_up_info WHERE email = $1 AND password = $2",
+            [email, password]
+        );
+
+        if(logInAttempt.rows.length === 0){
+            return res.status(401).json({error: "Invalid credentials"})
+        }
+
+        res.json(logInAttempt.rows[0]);
+
     } catch(err){
         console.error("FULL ERROR:", err.stack);
         res.status(500).json({error: err.message});

@@ -2,10 +2,11 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/logInStyles.css'; 
 import { useState} from 'react';
-//import { useNavigate } from 'react-router-dom'; **COME BACK AND USE LATER**
+import { useNavigate } from 'react-router-dom'; 
 
 function LogIn(){
     const location = useLocation();
+    const navigate = useNavigate(); 
 
     //Creating variables that will be sent to database for verification
     const [email, setEmail] = useState('');
@@ -15,20 +16,17 @@ function LogIn(){
     const handleSubmit = async(event) => {
         event.preventDefault();
         
-        //const navigate = useNavigate(); **Will take users to next page**
-        
-        const logInData = {
-            email,
-            password
-        };
-        
         try {
-            const response = await fetch("API URL HERE",{
+            const response = await fetch("http://localhost:5000/login",{
                 method: 'POST',
                 headers: {
-                    "Content-Type": "application/JSON"
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(logInData)
+                
+                body: JSON.stringify({
+                    email,
+                    password
+                })
             })
         
             if(!response.ok) {
@@ -38,13 +36,14 @@ function LogIn(){
             const result = await response.json();
         
             console.log("Success: ", result);
-            alert("Login Successful!")
-            //navigate('/dashboard') **will ideally lead user to dashboard**
+
+            alert("Log in Successful!");
+            navigate('/dashboard'); 
         
         
         } catch (error){
             console.error("Error with login: ", error);
-            alert("Form submission failed. Please try again later");
+            alert("Log in failed. Please make sure to enter the correct credentials.");
         }
         
     };
@@ -59,7 +58,7 @@ function LogIn(){
                 <br />
 
 
-                <label for="email" className="formLabels"><b>Admin Name: </b> </label>
+                <label htmlFor="email" className="formLabels"><b>Admin Name: </b> </label>
                 <input 
                     type="email" 
                     name="email" 
@@ -72,7 +71,7 @@ function LogIn(){
 
                 <br />
 
-                <label for="password" className="formLabels"><b>Password: </b> </label>
+                <label htmlFor="password" className="formLabels"><b>Password: </b> </label>
                 <input 
                     type="password"  
                     id="myPassword" 

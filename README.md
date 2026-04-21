@@ -89,5 +89,6 @@ connect to the server through the port number 5000, and will store user informat
 ## Milestone 2 Video
 [Milestone 2 Video](https://mediaspace.wisconsin.edu/media/Milestone+2/1_kb0534a1)
 
-
+## Milestone 3 Video
+This will eventually be replaced with the link to the video
 

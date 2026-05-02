@@ -77,7 +77,7 @@ function ChatBot(){
             boxSizing: "border-box"
         },
         header: {
-            textAlign: "center",
+            textAlign: "center", 
             marginBottom: "10px"
         },
         chatWindow: {

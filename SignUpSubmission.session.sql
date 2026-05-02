@@ -16,7 +16,7 @@ ADD COLUMN adminName VARCHAR(100) NOT NULL;
 CREATE TABLE comment_info (
     id SERIAL PRIMARY KEY,
     email VARCHAR(100) NOT NULL,
-    comment VARCHAR(100) NOT NULL
+    comment VARCHAR(500) NOT NULL
 );
 
 DELETE FROM comment_info

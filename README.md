@@ -44,7 +44,7 @@ connect to the server through the port number 5000, and will store user informat
   
 * **About Page:** Gives a more detailed description of what BrightTech Solutions is and what it hopes to accomplish.
   
-* **Services:** Each tab on this page will give a brief description on the four services that companies can choose from.
+* **Services:** Each tab on this page will give a brief description on the four services that companies can choose from. As well as a link to the BrightBot AI assistant that answers user questions about the details and importance of each service.
   
 * **Contact:** Gives clients and those who are simply curious about the company the opportunity to attach their email and a question/comment they have (this is to focus more on taking information from the application's front-end and saving it in the back-end database).
   

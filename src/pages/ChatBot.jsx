@@ -30,7 +30,7 @@ function ChatBot(){
 
             const userMessage = {role: "user", parts: [{text: input}]};
 
-
+            //Variable that stores the updates message
             let updateMessages;
 
             //Function that deals with updating the user message to the AI
@@ -38,12 +38,6 @@ function ChatBot(){
                 updateMessages = [...prev, userMessage];
                 return updateMessages;
             });
-            
-
-
-            //Variable that deals with updating the user message to the AI
-            //const updateMessages = [...messages, userMessage];
-            //setMessages(updateMessages);
 
             //Uses Gemini AI's startChat function to initiate the conversation
             //Also provides the AI with the previous chat history

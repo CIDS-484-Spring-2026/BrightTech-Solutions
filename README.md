@@ -93,4 +93,4 @@ connect to the server through the port number 5000, and will store user informat
 [Milestone 3 Video](https://mediaspace.wisconsin.edu/media/Milestone+3+Update/1_t455ejk5)
 
 ## Final Presentation
-This is where the final presentation video will go 
+[Senior Capstone Project Video](https://mediaspace.wisconsin.edu/media/Senior+Capstone+Project+Presentation+-+Lynn+Gobina/1_kck57fah)
